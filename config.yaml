@@ -1,0 +1,17 @@
+Cloudfront:
+  disableBeforeHours: 24  # 禁用24小时前创建的分配
+  deleteBeforeHours: 24 # 删除24小时前创建的分配
+  credential:
+    id: yourid  # 填写aws的credential id
+    secret: yoursecret  # 填写aws的credential secret
+Lark:
+  groupBotWebhook: # 填写飞书机器人的webhook地址，目前相关功能未使用
+V2ray:
+  vmessNum: 3 # 每次创建几个分配并生成vmess
+  domainName: yourdomain # v2ray的地址
+  originalVmess: yourvmessurl # 原始的vmess，会将其中的host、伪装域名、SNI替换成cloudfront分配的域名
+Nginx:
+  subscriptionDirectoty: yoursubscriptiondir  # 存放订阅文件的地址
+  subscriptionFileName: subscriptionname  # 订阅文件的名称
+Log:
+  logDir: yourlogdir  # 存放日志的目录，每天会创建新的目录文件
